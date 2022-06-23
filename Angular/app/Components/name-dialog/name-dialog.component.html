@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Welcome LiveChat</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name" autocomplete="doNotAutoComplete" required>
+    </mat-form-field>
+</div>
+<div mat-dialog-action *ngIf="name!=null">
+    <button mat-button [mat-dialog-close]="name" cdkFocusInitial>ok</button>
+</div>
+<div *ngIf="name==null">
+    <button mat-button disabled="true">ok</button>
+</div>

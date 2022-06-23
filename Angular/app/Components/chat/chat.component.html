@@ -1,0 +1,40 @@
+<div class="ChatContainer">
+    <div class="messages mx-auto">
+        <ng-template ngFor let-message [ngForOf]="messages" let-i="index">
+            <div *ngIf="message.userName == userName" class="message-line me">
+                <div class="message me">
+                    <div class="user-name me">{{ message.userName }}</div>
+                    <div class="message-text">{{ message.text }}</div>
+                </div>
+            </div>
+            <div *ngIf="message.userName != userName" class="message-line others">
+                <div class="message others">
+                    <div class="user-name others">{{ message.userName }}</div>
+                    <div class="message-text">{{ message.text }}</div>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+    <div class="footer">
+        <div class="File">
+            <input type="file" (change)="onChange($event)" />
+            <mat-icon>attach_file</mat-icon>
+        </div>
+        <form class="form" autocomplete="off">
+            <mat-form-field class="input">
+                <mat-label></mat-label>
+                <input matInput placeholder="Send a message Max 50 characters" id="messageControl" name="messageControl" [formControl]="messageControl" class="input" maxlength="50" />
+            </mat-form-field>
+            <button (click)="sendMessage()" color="primary" mat-mini-fab aria-label="Send">
+        <mat-icon>send</mat-icon>
+      </button>
+            <div *ngIf="messageControl.invalid && (messageControl.dirty || messageControl.touched)" class="alert">
+
+                <div *ngIf="messageControl.errors?.['maxlength']">
+                    Max 50 characters long.
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

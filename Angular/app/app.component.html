@@ -1,0 +1,28 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="SideBar my-auto">
+        <div>
+            Chat
+            <mat-icon class="ChatIcon">wechat</mat-icon>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content [class]="StyleClass">
+        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="OffCanvasBtn"><mat-icon class="OffCanvasIcon">settings</mat-icon></button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Background Settings</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body BackgroundBtns">
+                <img src="assets/img/default.jpg" (click)="StyleClass='SideBarContent'" class="default">
+                <img src="assets/img/bg1.jpg" (click)="StyleClass='bg1'">
+                <img src="assets/img/bg2.jpg" (click)="StyleClass='bg2'">
+                <img src="assets/img/bg3.jpg" (click)="StyleClass='bg3'">
+                <img src="assets/img/bg4.jpg" (click)="StyleClass='bg4'">
+                <img src="assets/img/bg5.jpg" (click)="StyleClass='bg5'">
+                <img src="assets/img/bg6.jpg" (click)="StyleClass='bg6'">
+                <img src="assets/img/bg7.jpg" (click)="StyleClass='bg7'">
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

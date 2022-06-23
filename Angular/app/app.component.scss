@@ -1,0 +1,157 @@
+.SideBar {
+    width: 20vw;
+    height: 100vh;
+    /* Created with https://www.css-gradient.com */
+    background: #A7FCF3;
+    background: -webkit-linear-gradient(bottom, #A7FCF3, #040D26);
+    background: -moz-linear-gradient(bottom, #A7FCF3, #040D26);
+    background: linear-gradient(to top, #A7FCF3, #040D26);
+    text-align: center;
+}
+
+.SideBar div {
+    color: white;
+    font-weight: bold;
+    margin-top: 10%;
+    font-size: larger;
+}
+
+.SideBar div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.SideBarContent {
+    height: 100vh;
+}
+
+.ChatIcon {
+    animation: chatIcon 2s ease 0s infinite normal forwards;
+}
+
+@keyframes chatIcon {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.OffCanvasBtn {
+    float: right;
+    position: sticky;
+    top: 30%;
+    background-color: #040D26;
+    color: white;
+    border: none;
+    border-radius: 50% 0 0 50%;
+    padding-right: 1.5%;
+    padding-top: 0.5%;
+    cursor: pointer;
+    z-index: 2;
+    position: -webkit-sticky;
+}
+
+.OffCanvasIcon {
+    animation: OffCanvasIcon 2s linear 0s infinite normal none;
+}
+
+@keyframes OffCanvasIcon {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.BackgroundBtns {
+    display: flex;
+    // position: absolute;
+    border: none;
+    background: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.BackgroundBtns img {
+    width: 40%;
+    height: 200px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.BackgroundBtns img:hover {
+    transform: scale(1.05);
+}
+
+.bg1 {
+    height: 100vh;
+    background-image: url('/assets/img/bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg2 {
+    height: 100vh;
+    background-image: url('/assets/img/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg3 {
+    height: 100vh;
+    background-image: url('/assets/img/bg3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg4 {
+    height: 100vh;
+    background-image: url('/assets/img/bg4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg5 {
+    height: 100vh;
+    background-image: url('/assets/img/bg5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg6 {
+    height: 100vh;
+    background-image: url('/assets/img/bg6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg7 {
+    height: 100vh;
+    background-image: url('/assets/img/bg7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.default {
+    box-shadow: 1px 1px 6px black;
+}
